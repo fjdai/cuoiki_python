@@ -1,0 +1,30 @@
+<div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+    <h2 style="color: #2c3e50; text-align: center; margin-bottom: 30px;">Hóa Đơn Khám Bệnh</h2>
+
+    <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+        <h3 style="color: #3498db; margin-bottom: 15px;">Chi Tiết Lịch Khám</h3>
+        <div style="margin-bottom: 10px;">
+            <strong>Bác sĩ:</strong> {{ doctor }}
+        </div>
+        <div style="margin-bottom: 10px;">
+            <strong>Ngày khám:</strong> {{ startTime.strftime('%d/%m/%Y') }}
+        </div>
+        <div style="margin-bottom: 10px;">
+            <strong>Thời gian:</strong> {{ startTime.strftime('%H:%M') }} - {{ endTime.strftime('%H:%M') }}
+        </div>
+        <div style="margin-bottom: 10px;">
+            <strong>Chi phí khám:</strong> {{ "{:,.0f}".format(price) }} VNĐ
+        </div>
+    </div>
+
+    <div style="background-color: #e8f4f8; padding: 15px; border-radius: 8px; margin-top: 20px;">
+        <p style="margin: 0; color: #2c3e50;">
+            Cảm ơn quý khách đã tin tưởng sử dụng dịch vụ của DoctorCare.
+            Nếu có bất kỳ thắc mắc nào về hóa đơn, vui lòng liên hệ tổng đài hỗ trợ: <strong>911 911</strong>
+        </p>
+    </div>
+
+    <div style="text-align: center; margin-top: 30px; color: #7f8c8d; font-size: 14px;">
+        <p>Email này được gửi tự động từ Hệ thống DoctorCare.</p>
+    </div>
+</div>

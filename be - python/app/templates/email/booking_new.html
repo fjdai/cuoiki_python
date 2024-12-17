@@ -1,0 +1,51 @@
+<div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+    <h2 style="color: #2c3e50; text-align: center; margin-bottom: 30px;">Thông Tin Đặt Lịch Khám</h2>
+
+    <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+        <h3 style="color: #3498db; margin-bottom: 15px;">Thông tin bệnh nhân</h3>
+        <div style="margin-bottom: 10px;">
+            <strong>Họ tên:</strong> {{ name }}
+        </div>
+        <div style="margin-bottom: 10px;">
+            <strong>Số điện thoại:</strong> {{ phone }}
+        </div>
+        <div style="margin-bottom: 10px;">
+            <strong>Email:</strong> {{ email }}
+        </div>
+        <div style="margin-bottom: 10px;">
+            <strong>Địa chỉ:</strong> {{ address }}
+        </div>
+        {% if description %}
+        <div style="margin-bottom: 10px;">
+            <strong>Mô tả:</strong> {{ description }}
+        </div>
+        {% endif %}
+    </div>
+
+    <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+        <h3 style="color: #3498db; margin-bottom: 15px;">Chi tiết lịch khám</h3>
+        <div style="margin-bottom: 10px;">
+            <strong>Bác sĩ:</strong> {{ doctor }}
+        </div>
+        <div style="margin-bottom: 10px;">
+            <strong>Thời gian:</strong> {{ startTime.strftime('%H:%M') }}
+        </div>
+        <div style="margin-bottom: 10px;">
+            <strong>Ngày khám:</strong> {{ startTime.strftime('%d/%m/%Y') }}
+        </div>
+        <div style="margin-bottom: 10px; color: #e67e22;">
+            <strong>Trạng thái:</strong> Đang chờ xác nhận
+        </div>
+    </div>
+
+    <div style="background-color: #e8f4f8; padding: 15px; border-radius: 8px;">
+        <p style="margin: 0; color: #2c3e50;">
+            Hệ thống DoctorCare sẽ gửi email thông báo khi bác sĩ xác nhận lịch khám.
+            <br />Xin vui lòng kiểm tra email thường xuyên.
+        </p>
+    </div>
+
+    <div style="text-align: center; margin-top: 30px; color: #7f8c8d; font-size: 14px;">
+        <p>Email này được gửi tự động từ Hệ thống DoctorCare.</p>
+    </div>
+</div>
